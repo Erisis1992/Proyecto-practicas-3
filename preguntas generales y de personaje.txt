@@ -1,0 +1,62 @@
+-que hace captivante al juego?
+
+el juego es entretenido y/o atrapante gracias a sus controles simples y sus físicas que emparejan bien con el diseño de nivel
+
+
+-como funcionan esas fisicas?
+
+el personaje acumula velocidad de a poco, arranca caminando, sube a un trote hasta correr a una velocidad tope.
+en ciertos casos esta velocidad se supera y se llega a un valor máximo.
+
+
+-como se maneja la velocidad?
+
+en llanuras la velocidad se maneja de forma neutral. pero si hay subidas o bajadas la velocidad baja o sube respectivamente
+en pocas palabras es una simulacion simplificada de la vida real.
+
+
+-que habilidades tiene el personaje?
+
+tiene un salto, puede rodar, cargar un impulso de velocidad desde el aire o cuando está de pie (el de aire tarda menos
+en cargar pero da menos velocidad que el otro) y hacer un ataque teledirigido hacia un enemigo cercano. 
+su vida depende de que posea la moneda del juego, mientras tenga al menos 1
+puede aguantar peligros que no signifiquen muerte instantanea (abismos, ser aplastado, ahogamiento, etc.)
+
+
+-que cualidades tiene el salto?
+
+cuando el personaje salta es capaz de atacar a los enemigos pero sigue siendo vulnerable a ataques de los mismos, normalmente
+los atraviesa, pero cuando se los ataca desde arriba el personaje invierte esa caida en un rebote. si el personaje salta
+desde una subida esta actúa como rampa y se consigue un salto mas alto, la altura de este es proporcional a la velocidad de
+movimiento que tenía el personaje antes de saltar (transformar una parte de velocidad horizontal a vertical)
+
+
+-como funciona rodar?
+
+cuando el personaje rueda es capaz de atacar como cuando salta, ayuda a mantener la velocidad atravesando los niveles y 
+atacar enemigos terrestres y destruir ciertos obstaculos.
+
+
+-como es el impulso de tierra?
+
+cuando el personaje esta quieto y de pie sobre una superficie, es capaz de cargar velocidad en ese mismo lugar, una vez la
+carga llega a su tope se puede liberar para salir disparado a velocidad tope, es ideal cuando tenemos una pendiente en frente
+y sin este se dificultaría subirla a pie
+
+
+-que tiene de diferente el de aire?
+
+cuando el personaje salta, puede hacer una acción similar para mantener una velocidad alta mientras sea capaz de hacer
+estos impulsos en cadena, similar en espiritu al turbo de mario kart
+
+
+-para que sirve el ataque teledirigido?
+
+medir las distancias entre el personaje y un enemigo para hacer contacto directo en un ataque se dificulta en un entorno 3d
+este ataque soluciona el problema, indicando con un marcador un posible objetivo a atacar, si se acciona el ataque el
+personaje cambia su dirección y se mueve automaticamente hacia el objetivo para atacarlo (esta habilidad se puede usar con
+distintos elementos del entorno como trampolines para accionarlos) una vez se complete el ataque el personaje tiene un 
+ligero impulso vertical.
+
+
+

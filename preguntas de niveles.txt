@@ -1,0 +1,11 @@
+-que hace tan importante el diseño de niveles?
+
+este tema es muy importante para un juego de este estilo ya que es lo que permite que el personaje pueda explotar sus 
+habilidades al maximo cuando el jugador sea capaz de hacerlo eventualmente.
+
+
+-que cualidades deben tener los niveles?
+
+en general los niveles deben ser grandes, semi abiertos y con caminos que se dividan con distintas cualidades
+de dificultad los cuales se cruzan de vez en cuando. las posibilidades de explorar e intentar superar lo mas rapido posible
+cada nivel es lo que le agrega valor al juego y hace gratificante jugar mas de una vez al mismo
