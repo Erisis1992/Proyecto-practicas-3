@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://bwimvjcuapdkh"]
+
+[ext_resource type="Texture2D" uid="uid://cv33ulc6hpfim" path="res://d1swpye-7e76ddec-cdda-4369-a18b-8ddbe4e3e45c.png" id="1_t75uu"]
+[ext_resource type="PackedScene" uid="uid://0ud0hqmwlalp" path="res://player.tscn" id="2_mshfu"]
+[ext_resource type="FontFile" uid="uid://bnbpibsghm2ni" path="res://Montserrat-Medium.ttf" id="3_25mpk"]
+[ext_resource type="Script" path="res://label_velocidad.gd" id="4_5amo6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oane4"]
+size = Vector3(800, 1, 800)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ubbq"]
+albedo_texture = ExtResource("1_t75uu")
+uv1_scale = Vector3(500, 500, 500)
+
+[sub_resource type="BoxMesh" id="BoxMesh_eq3fc"]
+material = SubResource("StandardMaterial3D_4ubbq")
+size = Vector3(800, 1, 800)
+
+[sub_resource type="Theme" id="Theme_3yjhj"]
+default_font = ExtResource("3_25mpk")
+default_font_size = 30
+
+[node name="main" type="Node"]
+
+[node name="Piso" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Piso"]
+shape = SubResource("BoxShape3D_oane4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Piso"]
+mesh = SubResource("BoxMesh_eq3fc")
+
+[node name="player" parent="." groups=["player"] instance=ExtResource("2_mshfu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Camera3D" type="Camera3D" parent="player" groups=["player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00529099, 1.01528, 2.97324)
+
+[node name="Marker3D" type="Marker3D" parent="player/Camera3D" groups=["player"]]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999948, -0.01002, -0.00181143, 0.00660332, 0.502709, 0.864431, -0.00775094, -0.864398, 0.502749, -4.28604, 52.3852, -16.2922)
+light_color = Color(0.756333, 0.57, 1, 1)
+light_energy = 0.865
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_3yjhj")
+
+[node name="Velocidad" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 52.0
+offset_right = 224.0
+offset_bottom = 95.0
+text = "Velocidad: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_5amo6")
+
+[connection signal="count" from="player" to="Control/Velocidad" method="_on_player_count"]
+[connection signal="decount" from="player" to="Control/Velocidad" method="_on_player_decount"]
+[connection signal="max" from="player" to="Control/Velocidad" method="_on_player_max"]
